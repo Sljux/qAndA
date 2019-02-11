@@ -1,0 +1,16 @@
+<app-question
+  [question]="question"
+>
+</app-question>
+
+<div class="answers">
+  <app-answer-list
+    [answers]="question?.answers"
+  >
+  </app-answer-list>
+
+  <app-add-answer
+    (answered)="addAnswer($event)"
+  >
+  </app-add-answer>
+</div>

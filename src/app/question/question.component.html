@@ -1,0 +1,24 @@
+<mat-card *ngIf="question">
+  <mat-card-header (click)="select.emit()">
+    <mat-card-title>
+      <div>Question:</div>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content (click)="select.emit()">
+    <div [innerHtml]="question.text"></div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button (click)="question.upvote()"
+            [color]="question.upvoted ? 'primary' : null">
+      <mat-icon>expand_less</mat-icon>
+      {{ question.upvotes }}
+    </button>
+    <button mat-button (click)="question.downvote()"
+            [color]="question.downvoted ? 'warn' : null">
+      <mat-icon>expand_more</mat-icon>
+      {{ question.downvotes }}
+    </button>
+  </mat-card-actions>
+</mat-card>

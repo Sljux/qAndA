@@ -1,0 +1,10 @@
+.list {
+  display        : flex;
+  flex-direction : column;
+  flex           : 1;
+
+  app-question {
+    margin-bottom : 30px;
+  }
+}
+

@@ -1,0 +1,8 @@
+<div class="list">
+  <app-question
+    *ngFor="let q of (questions$ | async)"
+    [question]="q"
+    (select)="navigateToDetails(q)"
+  >
+  </app-question>
+</div>
